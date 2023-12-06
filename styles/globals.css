@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  display: grid;
+  grid-template-columns: 230px auto;
+  background: black;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+}
+nav {
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(147, 147, 147, 0.25);
+}
+.nav {
+  display: flex;
+  border-bottom: 0.1px solid #8f8f8f;
+  padding: 1em 0 1em 1em;
+  font-weight: 400;
+  transition: background-color 1000ms;
+  transition-delay: 200ms;
+}
+.nav:hover {
+  background-color: #e3eefe;
+  cursor: pointer;
+}
+.nav:last-child {
+  border-bottom: 0;
+}
+.nav:hover span{
+  background-color: #0d6efd;
+  color: #fff;
+  transition: background-color 1000ms;
+  transition-delay: 200ms;
+}
+.nav h1 {
+  margin-left: 1em;
+}
+.nav:focus {
+  background-color: #e3eefe;
+}
+main {
+  background-color: #fff;
+}
+.green {
+  background-color: #32a431;
+  filter: blur(2.5px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.card {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 5px rgba(222, 222, 222, 0.25);
+  color: #8b8b8b;
+  padding: 2em 0.7em;
+  
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.save:hover {
+  cursor: pointer;
+  scale: 1.05;
+  border: 1px solid rgba(222, 222, 222, 0.25);
+  transition-duration: 1000ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: 300ms;
+}
+.button:hover {
+  transition-duration: 1000ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: 300ms;
+}
+.help {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(147, 147, 147, 0.25);
 }
